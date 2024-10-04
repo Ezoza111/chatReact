@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from'./profile.scss'
+import { Post } from './MyPosts/Post/Post';
 
 export const Profile = () => {
  return (
@@ -17,15 +18,7 @@ export const Profile = () => {
         New post
       </div>
       <div className={styles.posts}>
-        <div className={styles.postsItem}>
-          post 1
-        </div>
-        <div className={styles.postsItem}>
-          post 1
-        </div>
-        <div className={styles.postsItem}>
-          post 1
-        </div>
+        <Post />
       </div>
     </div>
   </div>

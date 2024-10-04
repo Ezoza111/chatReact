@@ -1,0 +1,26 @@
+.posts {
+    &Item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    gap: 20px;
+      &Avatar{
+        background: black;
+        width: 9%;
+        height: 40px;
+        border-radius: 50%;
+      }
+      &Message {
+        width: 60%;
+      }
+      &LikeCount {
+        width: 20%;
+      }
+    }
+    
+}
+.postsAvatar {
+    width: 20%;
+    border-radius: 50%;
+}
