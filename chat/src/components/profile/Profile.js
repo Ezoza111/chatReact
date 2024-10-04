@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from'./profile.module.scss'
+import styles from'./profile.scss'
 
 export const Profile = () => {
  return (
   <div className={styles.content}>
     <div className={styles.contentMain}>
-        <img className={styles.contentMainPhoto} src='https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg'></img>
+    <img src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350' />
     </div>
     <div className={styles.contentUser}>
-        <img className={styles.contentPhoto} src='https://img.freepik.com/free-photo/little-grey-kitten-with-blue-eyes-lies-on-the-grey-couch_8353-7261.jpg?size=626&ext=jpg&ga=GA1.1.984129171.1670063774&semt=ais_hybrid'></img>
+    <img src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350' />
         <div className={styles.contentUserInfo}></div>
     </div>
     <div>
