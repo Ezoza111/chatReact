@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from'./profile.scss'
 import { Post } from './MyPosts/Post/Post';
+import { MyPosts } from './MyPosts/MyPosts';
 
 export const Profile = () => {
  return (
@@ -13,13 +14,7 @@ export const Profile = () => {
         <div className={styles.contentUserInfo}></div>
     </div>
     <div>
-      My posts
-      <div>
-        New post
-      </div>
-      <div className={styles.posts}>
-        <Post />
-      </div>
+      <MyPosts />
     </div>
   </div>
  )
