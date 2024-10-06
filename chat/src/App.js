@@ -10,7 +10,7 @@ function App () {
     <Routes>
       <Route path='/' element={<Layout />}>
       <Route path='/' index element={<Profile />}/>
-      <Route path='/Dialogs' element={<Dialogs />}/>
+      <Route path='/dialogs/*' element={<Dialogs />}/>
       </Route>
     </Routes>
     </BrowserRouter>
