@@ -1,37 +1,24 @@
 import React from "react";
 import style from "./dialogs.module.scss"
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import { Message } from "./Messages/message";
+import { DialogsItem } from './DialogItem/DialogItem';
 
 
-export const Dialogs = () => {
-    const DialogItem = (props) =>{
-        let path = "" + props.id;
-        return (
-            <li key={props.id}>
-                <Link to={path}>{props.name}</Link>
-            </li>
-        )
-    }
-    let dialogs = [
-        {id: 1, name: 'Dimych'},
-        {id: 2, name: 'Andrew'},
-        {id: 3, name: 'Sveta'},
-        {id: 4, name: 'Sasha'},
-        {id: 5, name: 'Viktor'},
-        {id: 6, name: 'Valera'}
-    ]
-    let dialogsItems = dialogs.map(el=><DialogItem id={el.id} name={el.name}/>)
+export const Dialogs = (props) => {
+    let dialogsItems = props.dialogs.map(el=><DialogsItem id={el.id} name={el.name}/>)
     return (
         <div className={style.dialogs}>
           <div className={style.dialogsItems}>
-            <ul>
+            <ul className={style.dialogsItemsList}>
               {dialogsItems}
             </ul>
           </div>
           <div className={style.dialogsMessages}>
             <Routes>
-                
+                {props.messageArr.map(el=> 
+                  <Route path={el.id} element={<Message message={el.message}/>}/>
+                )}
             </Routes>
             <Outlet />
           </div>
